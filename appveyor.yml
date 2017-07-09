@@ -8,7 +8,7 @@ build:
     publish_wap: true
 
 test_script:
-- ps: vstest.console /logger:Appveyor "XP_BDD_1.Tests\bin\Debug\XP_BDD_1.Tests.dll" /TestAdapterPath:"packages"
+- ps: vstest.console /logger:Appveyor "C:\projects\xp-specflow-selenium-test-example\XP_BDD_1.Tests\bin\Debug\XP_BDD_1.Tests.dll" /TestAdapterPath:"packages"
 
 deploy:
      provider: Environment
