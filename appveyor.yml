@@ -1,0 +1,12 @@
+version: 1.0.0-{build}
+configuration: Release
+cache:
+    - packages -> **\packages.config
+before_build: nuget restore
+build:
+    publish_wap: true
+deploy:
+     provider: Environment
+     name: XP_Specflow_Selenium_Test_Example
+     on:
+       branch: master
