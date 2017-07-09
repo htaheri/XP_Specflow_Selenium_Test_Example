@@ -31,7 +31,7 @@ namespace XP_BDD_1.Tests
         public void GivenIAmOnTheHomePage()
         {
             driver.Url = "http://xptehran.azurewebsites.net/home.html";
-            Assert.AreEqual("FAD XP Course", driver.Title);
+            Assert.AreEqual("FAD XP Course 2", driver.Title);
         }
 
         [When(@"I enter '(.*)' into the '(.*)' input field")]
