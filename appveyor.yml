@@ -3,8 +3,16 @@ configuration: Release
 cache:
     - packages -> **\packages.config
 before_build: nuget restore
+appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+appveyor DownloadFile https://raw.githubusercontent.com/appveyor/ci/master/scripts/nuget-restore.cmd
+nuget-restore XP_BDD_1.sln
+
 build:
     publish_wap: true
+
+test_script:
+ps: vstest.console /logger:Appveyor "XP_BDD_1\bin\XP_BDD_1.dll" /TestAdapterPath:"packages"
+
 deploy:
      provider: Environment
      name: XP_Specflow_Selenium_Test_Example
