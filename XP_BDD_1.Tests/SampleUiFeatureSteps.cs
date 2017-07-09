@@ -30,10 +30,10 @@ namespace XP_BDD_1.Tests
         [Given(@"I am on the home page")]
         public void GivenIAmOnTheHomePage()
         {
-            driver.Url = "http://localhost:53017/Home.html";
+            driver.Url = "http://xptehran.azurewebsites.net/home.html";
             Assert.AreEqual("FAD XP Course", driver.Title);
         }
-        
+
         [When(@"I enter '(.*)' into the '(.*)' input field")]
         public void WhenIEnterIntoTheInputField(string text, string fieldId)
         {
@@ -47,7 +47,7 @@ namespace XP_BDD_1.Tests
         {
             driver.FindElement(By.Id(controlId)).Click();
         }
-        
+
         [Then(@"'(.*)' should be displayed in the '(.*)' field")]
         public void ThenShouldBeDisplayedInTheField(string expectedText, string fieldId)
         {
