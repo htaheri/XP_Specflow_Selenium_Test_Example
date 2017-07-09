@@ -6,7 +6,7 @@ Before running the test, you need to make sure the Home.HTML in XP_BDD_1 project
 
 When your test runs successfuly, add below scenario to it and test again:
 
-
+```C#
 Scenario Outline: Example Scenario Outline
 	Given I am on the home page
 	When I enter '<text>' into the 'title' input field  
@@ -18,3 +18,4 @@ Scenario Outline: Example Scenario Outline
 		| hello world           |
 		| good morning sunshine |
 		| HELLO XP Students     |
+```
