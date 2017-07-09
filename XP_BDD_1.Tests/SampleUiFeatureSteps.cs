@@ -30,7 +30,7 @@ namespace XP_BDD_1.Tests
         [Given(@"I am on the home page")]
         public void GivenIAmOnTheHomePage()
         {
-            driver.Url = "http://xptehran.azurewebsites.net/home.html";
+            driver.Url = "C:\projects\xp-specflow-selenium-test-example\XP_BDD_1\obj\Release\Package\PackageTmp\Home.html";
             Assert.AreEqual("FAD XP Course 2", driver.Title);
         }
 
